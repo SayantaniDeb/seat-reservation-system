@@ -1,0 +1,32 @@
+<!-- src/app/seat-reservation/seat-reservation.component.html -->
+<div class="reservation-container">
+  <h1>Book your seats here</h1>
+  <!-- Seat Reservation Block -->
+  <div class="reservation-section">
+    
+    <h2>Seat Reservation</h2>
+    <p>Maximum 7 seats can be reserved at a time.</p>
+    <input type="number" [(ngModel)]="requestedSeats" placeholder="Enter number of seats" />
+    <button (click)="reserveSeats(requestedSeats)">Reserve Seats</button>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+    <!-- Booked Seats Block Below -->
+
+<p *ngIf="bookedSeats.length > 0">
+  Booked Seats: {{ bookedSeats.join(', ') }}
+</p>
+  </div>
+  
+
+  <!-- Coach Layout Block -->
+  <div class="coach-section">
+    <h3>Coach Layout</h3>
+    <div class="coach">
+      <div *ngFor="let seat of seats" [class.booked]="seat.isBooked">
+        {{ seat.seatNumber }}
+      </div>
+    </div>
+  </div>
+</div>
+
+

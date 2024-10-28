@@ -1,0 +1,114 @@
+/* src/app/seat-reservation/seat-reservation.component.css */
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
+  
+}
+
+/* Container for the entire reservation area */
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0;
+  padding: 50px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #567010, #02363a);
+  color: #fff;
+}
+
+/* Seat Reservation Block */
+.reservation-section,
+.booked-seats-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3 {
+  color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff6161;
+  font-weight: bold;
+}
+
+/* Input Field Styling */
+input[type="number"] {
+  padding: 10px;
+  width: calc(100% - 20px);
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background: #ff7e5f;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+/* Booked Seats Block */
+.booked-seats-section p {
+  color: #f9f9f9;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Coach Layout */
+.coach-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Seat Styling */
+.coach {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.coach div {
+  background-color: #6dd5ed;
+  color: #333;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.coach div.booked {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
